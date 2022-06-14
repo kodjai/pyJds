@@ -11,7 +11,7 @@ It is necessary to install eBUS SDK before to use this library.
 ## How to install
 Currently it is able to install from only local fiile.
 ### Install step
-1. Download whl file from https://github.com/jai-rd/pyJds/releases.
+1. Download whl file from https://github.com/JAI-public/pyJds/releases
 
 2. `pip install ./pyjds-0.0.4-py3-none-win_amd64.whl`
 

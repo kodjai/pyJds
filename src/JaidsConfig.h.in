@@ -1,0 +1,4 @@
+// JaidsのVersion
+#define Jaids_VERSION_MAJOR @Jaids_VERSION_MAJOR @
+#define Jaids_VERSION_MINOR @Jaids_VERSION_MINOR @
+#define Jaids_VERSION_PATCH @Jaids_VERSION_PATCH @

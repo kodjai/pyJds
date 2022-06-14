@@ -1,0 +1,17 @@
+/build/*
+/cmake-build-debug
+**/__pycache__
+**/_build
+**/build/*
+*.bak
+/venv/Lib/site-packages/*
+/.vs
+/python/venv/*
+**/venv/*
+/python/src/build/*
+/python/src/dist/*
+/python/src/pyjds.egg-info/*
+*.rst
+/python/api-docs/*.rst
+/python/src/build
+*.pyd

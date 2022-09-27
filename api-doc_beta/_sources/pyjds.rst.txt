@@ -1,0 +1,245 @@
+pyjds package
+=============
+
+Submodules
+----------
+
+pyjds.buffer module
+-------------------
+
+.. automodule:: pyjds.buffer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.device module
+-------------------
+
+.. automodule:: pyjds.device
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.device\_factory module
+----------------------------
+
+.. automodule:: pyjds.device_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.device\_finder module
+---------------------------
+
+.. automodule:: pyjds.device_finder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.device\_gev module
+------------------------
+
+.. automodule:: pyjds.device_gev
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.device\_info module
+-------------------------
+
+.. automodule:: pyjds.device_info
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.device\_u3v module
+------------------------
+
+.. automodule:: pyjds.device_u3v
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.enum\_access\_type module
+-------------------------------
+
+.. automodule:: pyjds.enum_access_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.enum\_debayer\_type module
+--------------------------------
+
+.. automodule:: pyjds.enum_debayer_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.enum\_detect\_device\_method\_type module
+-----------------------------------------------
+
+.. automodule:: pyjds.enum_detect_device_method_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.enum\_feature\_type module
+--------------------------------
+
+.. automodule:: pyjds.enum_feature_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.enum\_interface\_type module
+----------------------------------
+
+.. automodule:: pyjds.enum_interface_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.enum\_representation\_type module
+---------------------------------------
+
+.. automodule:: pyjds.enum_representation_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.enum\_visibility\_type module
+-----------------------------------
+
+.. automodule:: pyjds.enum_visibility_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.error\_pyjds module
+-------------------------
+
+.. automodule:: pyjds.error_pyjds
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature module
+--------------------
+
+.. automodule:: pyjds.feature
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature\_bool module
+--------------------------
+
+.. automodule:: pyjds.feature_bool
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature\_command module
+-----------------------------
+
+.. automodule:: pyjds.feature_command
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature\_enum module
+--------------------------
+
+.. automodule:: pyjds.feature_enum
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature\_enum\_entry module
+---------------------------------
+
+.. automodule:: pyjds.feature_enum_entry
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature\_float module
+---------------------------
+
+.. automodule:: pyjds.feature_float
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature\_integer module
+-----------------------------
+
+.. automodule:: pyjds.feature_integer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature\_register module
+------------------------------
+
+.. automodule:: pyjds.feature_register
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.feature\_string module
+----------------------------
+
+.. automodule:: pyjds.feature_string
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.host\_interface module
+----------------------------
+
+.. automodule:: pyjds.host_interface
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.image module
+------------------
+
+.. automodule:: pyjds.image
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.stream module
+-------------------
+
+.. automodule:: pyjds.stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.stream\_gev module
+------------------------
+
+.. automodule:: pyjds.stream_gev
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyjds.stream\_u3v module
+------------------------
+
+.. automodule:: pyjds.stream_u3v
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: pyjds
+   :members:
+   :undoc-members:
+   :show-inheritance:

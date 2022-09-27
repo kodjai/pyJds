@@ -1,0 +1,43 @@
+=========================================
+Error correspondence table with PvResult
+=========================================
+
+======================  ================
+Error class             PvResult
+======================  ================
+...                     NOT_INITIALIZED  
+...                     NOT_FOUND
+                        CANNOT_OPEN_FILE   
+..                      NO_MORE_ITEM
+..                      NO_MORE_ITEM
+..                      STATE_ERROR
+..                      THREAD_ERROR
+..                      INVALID_DATA_FORMAT
+..                      ABORTED
+..                      GENERIC_ERROR
+..                      INVALID_PARAMETER
+..                      CANCEL
+..                      PENDING
+..                      TIMEOUT
+PyJdsConnectError       NO_LICENSE
+        ↑               GENICAM_XML_ERROR
+        ↑               CANT_READ_MANIFEST
+        ↑               NOT_CONNECTED
+..                      NOT_IMPLEMENTED
+..                      NOT_SUPPORTED
+..                      ERR_OVERFLOW
+..                      IMAGE_ERROR
+..                      MISSING_PACKETS
+..                      BUFFER_TOO_SMALL
+..                      RESENDS_FAILURE
+..                      TOO_MANY_CONSECUTIVE_RESENDS
+..                      AUTO_ABORTED
+..                      BAD_VERSION
+..                      NO_MORE_ENTRY
+..                      AUTO_ABORTED
+..                      NO_AVAILABLE_DATA
+..                      NETWORK_ERROR
+..                      RESYNC
+..                      BUSY
+..                      CORRUPTED_DATA
+======================  ================

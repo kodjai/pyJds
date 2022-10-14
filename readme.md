@@ -20,7 +20,7 @@ Currently it is able to install from only local file.
 ### Install step
 1. Download the whl file from https://github.com/JAI-public/pyJds/releases
 
-2. `pip install ./pyjds-0.0.4-py3-none-win_amd64.whl`
+2. `pip install ./pyjds-0.0.5-py3-none-win_amd64.whl`
 ## Start Development
 
 **Note**: Pull requests to JAI pyJds are welcome!

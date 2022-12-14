@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pyjds package &mdash; pyjds 0.0.3 documentation</title>
+  <title>pyjds package &mdash; pyjds v0.0.5 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,9 +16,11 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Error correspondence table with PvResult" href="error_convert_table.html" />
     <link rel="prev" title="About pyjds" href="top.html" /> 
 </head>
 
@@ -42,38 +44,317 @@
 <li class="toctree-l1"><a class="reference internal" href="top.html">About pyjds</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">pyjds package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-buffer-module">pyjds.buffer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-device-module">pyjds.device module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-device-factory-module">pyjds.device_factory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-device-finder-module">pyjds.device_finder module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-device-gev-module">pyjds.device_gev module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-device-info-module">pyjds.device_info module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-device-u3v-module">pyjds.device_u3v module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-enum-access-type-module">pyjds.enum_access_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_debayer_type">pyjds.enum_debayer_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-enum-detect-device-method-type-module">pyjds.enum_detect_device_method_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_feature_type">pyjds.enum_feature_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-enum-interface-type-module">pyjds.enum_interface_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-enum-representation-type-module">pyjds.enum_representation_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_visibility_type">pyjds.enum_visibility_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-error-pyjds-module">pyjds.error_pyjds module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature">pyjds.feature module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-feature-bool-module">pyjds.feature_bool module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-feature-command-module">pyjds.feature_command module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-feature-enum-module">pyjds.feature_enum module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-feature-enum-entry-module">pyjds.feature_enum_entry module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-feature-float-module">pyjds.feature_float module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-feature-integer-module">pyjds.feature_integer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-feature-register-module">pyjds.feature_register module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-feature-string-module">pyjds.feature_string module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-host-interface-module">pyjds.host_interface module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.image">pyjds.image module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-stream-module">pyjds.stream module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-stream-gev-module">pyjds.stream_gev module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyjds-stream-u3v-module">pyjds.stream_u3v module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.buffer">pyjds.buffer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.buffer.Buffer"><code class="docutils literal notranslate"><span class="pre">Buffer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.block_id"><code class="docutils literal notranslate"><span class="pre">Buffer.block_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.get_chunk_values"><code class="docutils literal notranslate"><span class="pre">Buffer.get_chunk_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.get_image"><code class="docutils literal notranslate"><span class="pre">Buffer.get_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.lost_packet_count"><code class="docutils literal notranslate"><span class="pre">Buffer.lost_packet_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.packet_out_of_order_count"><code class="docutils literal notranslate"><span class="pre">Buffer.packet_out_of_order_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.packet_recoverd_count"><code class="docutils literal notranslate"><span class="pre">Buffer.packet_recoverd_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.payload_size"><code class="docutils literal notranslate"><span class="pre">Buffer.payload_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.reception_time"><code class="docutils literal notranslate"><span class="pre">Buffer.reception_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.resend_group_request_count"><code class="docutils literal notranslate"><span class="pre">Buffer.resend_group_request_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.resend_packet_requested_count"><code class="docutils literal notranslate"><span class="pre">Buffer.resend_packet_requested_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.buffer.Buffer.timestamp"><code class="docutils literal notranslate"><span class="pre">Buffer.timestamp</span></code></a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.device">pyjds.device module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.device.Device"><code class="docutils literal notranslate"><span class="pre">Device</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.acquisition_start"><code class="docutils literal notranslate"><span class="pre">Device.acquisition_start()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.acquisition_stop"><code class="docutils literal notranslate"><span class="pre">Device.acquisition_stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.connect"><code class="docutils literal notranslate"><span class="pre">Device.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.create_and_open_streams"><code class="docutils literal notranslate"><span class="pre">Device.create_and_open_streams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.dis_connect"><code class="docutils literal notranslate"><span class="pre">Device.dis_connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.get_communication_parameter"><code class="docutils literal notranslate"><span class="pre">Device.get_communication_parameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.get_communication_parameters"><code class="docutils literal notranslate"><span class="pre">Device.get_communication_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.get_feature"><code class="docutils literal notranslate"><span class="pre">Device.get_feature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.get_features"><code class="docutils literal notranslate"><span class="pre">Device.get_features()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.interface_type"><code class="docutils literal notranslate"><span class="pre">Device.interface_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device.Device.is_connected"><code class="docutils literal notranslate"><span class="pre">Device.is_connected()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.device_factory">pyjds.device_factory module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.device_factory.DeviceFactory"><code class="docutils literal notranslate"><span class="pre">DeviceFactory</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_factory.DeviceFactory.create"><code class="docutils literal notranslate"><span class="pre">DeviceFactory.create()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.device_finder">pyjds.device_finder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.device_finder.DeviceFinder"><code class="docutils literal notranslate"><span class="pre">DeviceFinder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_finder.DeviceFinder.find"><code class="docutils literal notranslate"><span class="pre">DeviceFinder.find()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.device_gev">pyjds.device_gev module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.device_gev.DeviceGEV"><code class="docutils literal notranslate"><span class="pre">DeviceGEV</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_gev.DeviceGEV.connect"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_gev.DeviceGEV.create"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_gev.DeviceGEV.create_and_open_streams"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.create_and_open_streams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_gev.DeviceGEV.ip_address"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.ip_address</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_gev.DeviceGEV.mac_address"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.mac_address</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.device_info">pyjds.device_info module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.device_info.DeviceInfo"><code class="docutils literal notranslate"><span class="pre">DeviceInfo</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.connection_id"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.connection_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.device_version"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.device_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.get_host_interface"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.get_host_interface()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.interface_type"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.interface_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.manufacture_info"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.manufacture_info</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.model_name"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.model_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.serial_number"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.serial_number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.user_id"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_info.DeviceInfo.vendor_name"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.vendor_name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.device_u3v">pyjds.device_u3v module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.device_u3v.DeviceU3V"><code class="docutils literal notranslate"><span class="pre">DeviceU3V</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_u3v.DeviceU3V.connect"><code class="docutils literal notranslate"><span class="pre">DeviceU3V.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_u3v.DeviceU3V.create"><code class="docutils literal notranslate"><span class="pre">DeviceU3V.create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_u3v.DeviceU3V.create_and_open_streams"><code class="docutils literal notranslate"><span class="pre">DeviceU3V.create_and_open_streams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.device_u3v.DeviceU3V.guid"><code class="docutils literal notranslate"><span class="pre">DeviceU3V.guid</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_access_type">pyjds.enum_access_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.enum_access_type.AccessType"><code class="docutils literal notranslate"><span class="pre">AccessType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_access_type.AccessType.Control"><code class="docutils literal notranslate"><span class="pre">AccessType.Control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_access_type.AccessType.Exclusive"><code class="docutils literal notranslate"><span class="pre">AccessType.Exclusive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_access_type.AccessType.ReadOnly"><code class="docutils literal notranslate"><span class="pre">AccessType.ReadOnly</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_debayer_type">pyjds.enum_debayer_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.enum_debayer_type.DebayerType"><code class="docutils literal notranslate"><span class="pre">DebayerType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_debayer_type.DebayerType.INTERPOLATION"><code class="docutils literal notranslate"><span class="pre">DebayerType.INTERPOLATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_debayer_type.DebayerType.NOBAYERPROCESS"><code class="docutils literal notranslate"><span class="pre">DebayerType.NOBAYERPROCESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_debayer_type.DebayerType.SIMPLE"><code class="docutils literal notranslate"><span class="pre">DebayerType.SIMPLE</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_detect_device_method_type">pyjds.enum_detect_device_method_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.enum_detect_device_method_type.DetectDeviceType"><code class="docutils literal notranslate"><span class="pre">DetectDeviceType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_detect_device_method_type.DetectDeviceType.DirectedBroadcast"><code class="docutils literal notranslate"><span class="pre">DetectDeviceType.DirectedBroadcast</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_detect_device_method_type.DetectDeviceType.LimitedBroadcast"><code class="docutils literal notranslate"><span class="pre">DetectDeviceType.LimitedBroadcast</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_feature_type">pyjds.enum_feature_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType"><code class="docutils literal notranslate"><span class="pre">FeatureType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType.BOOLEAN"><code class="docutils literal notranslate"><span class="pre">FeatureType.BOOLEAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType.COMMAND"><code class="docutils literal notranslate"><span class="pre">FeatureType.COMMAND</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType.ENUMERATION"><code class="docutils literal notranslate"><span class="pre">FeatureType.ENUMERATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType.FLOAT"><code class="docutils literal notranslate"><span class="pre">FeatureType.FLOAT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType.INTEGER"><code class="docutils literal notranslate"><span class="pre">FeatureType.INTEGER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType.REGISTER"><code class="docutils literal notranslate"><span class="pre">FeatureType.REGISTER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType.STRING"><code class="docutils literal notranslate"><span class="pre">FeatureType.STRING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_feature_type.FeatureType.get"><code class="docutils literal notranslate"><span class="pre">FeatureType.get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_interface_type">pyjds.enum_interface_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.enum_interface_type.InterfaceType"><code class="docutils literal notranslate"><span class="pre">InterfaceType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_interface_type.InterfaceType.GigEVision"><code class="docutils literal notranslate"><span class="pre">InterfaceType.GigEVision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_interface_type.InterfaceType.USB3Vision"><code class="docutils literal notranslate"><span class="pre">InterfaceType.USB3Vision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_interface_type.InterfaceType.get"><code class="docutils literal notranslate"><span class="pre">InterfaceType.get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_representation_type">pyjds.enum_representation_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType"><code class="docutils literal notranslate"><span class="pre">RepresentationType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType.BOOLEAN"><code class="docutils literal notranslate"><span class="pre">RepresentationType.BOOLEAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType.HEXNUMBER"><code class="docutils literal notranslate"><span class="pre">RepresentationType.HEXNUMBER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType.LINEAR"><code class="docutils literal notranslate"><span class="pre">RepresentationType.LINEAR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType.LOGARITHMIC"><code class="docutils literal notranslate"><span class="pre">RepresentationType.LOGARITHMIC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType.PURENUMBER"><code class="docutils literal notranslate"><span class="pre">RepresentationType.PURENUMBER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType.get"><code class="docutils literal notranslate"><span class="pre">RepresentationType.get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.enum_visibility_type">pyjds.enum_visibility_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.enum_visibility_type.VisibilityType"><code class="docutils literal notranslate"><span class="pre">VisibilityType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_visibility_type.VisibilityType.BEGINNER"><code class="docutils literal notranslate"><span class="pre">VisibilityType.BEGINNER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_visibility_type.VisibilityType.EXPERT"><code class="docutils literal notranslate"><span class="pre">VisibilityType.EXPERT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_visibility_type.VisibilityType.GURU"><code class="docutils literal notranslate"><span class="pre">VisibilityType.GURU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_visibility_type.VisibilityType.INVISIBLE"><code class="docutils literal notranslate"><span class="pre">VisibilityType.INVISIBLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.enum_visibility_type.VisibilityType.get"><code class="docutils literal notranslate"><span class="pre">VisibilityType.get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.error_pyjds">pyjds.error_pyjds module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.error_pyjds.PyJdsAcqusitionException"><code class="docutils literal notranslate"><span class="pre">PyJdsAcqusitionException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.error_pyjds.PyJdsConnectException"><code class="docutils literal notranslate"><span class="pre">PyJdsConnectException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.error_pyjds.PyJdsException"><code class="docutils literal notranslate"><span class="pre">PyJdsException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.error_pyjds.PyJdsFeatureException"><code class="docutils literal notranslate"><span class="pre">PyJdsFeatureException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.error_pyjds.PyJdsStreamException"><code class="docutils literal notranslate"><span class="pre">PyJdsStreamException</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature">pyjds.feature module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature.Feature"><code class="docutils literal notranslate"><span class="pre">Feature</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.category"><code class="docutils literal notranslate"><span class="pre">Feature.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.description"><code class="docutils literal notranslate"><span class="pre">Feature.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.display_name"><code class="docutils literal notranslate"><span class="pre">Feature.display_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.feature_type"><code class="docutils literal notranslate"><span class="pre">Feature.feature_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.from_string"><code class="docutils literal notranslate"><span class="pre">Feature.from_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.is_available"><code class="docutils literal notranslate"><span class="pre">Feature.is_available()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.is_implement"><code class="docutils literal notranslate"><span class="pre">Feature.is_implement()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.is_readable"><code class="docutils literal notranslate"><span class="pre">Feature.is_readable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.is_selector"><code class="docutils literal notranslate"><span class="pre">Feature.is_selector()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.is_streamable"><code class="docutils literal notranslate"><span class="pre">Feature.is_streamable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.is_writable"><code class="docutils literal notranslate"><span class="pre">Feature.is_writable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.name"><code class="docutils literal notranslate"><span class="pre">Feature.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.tool_tip"><code class="docutils literal notranslate"><span class="pre">Feature.tool_tip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.value"><code class="docutils literal notranslate"><span class="pre">Feature.value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature.Feature.visibility"><code class="docutils literal notranslate"><span class="pre">Feature.visibility</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature_bool">pyjds.feature_bool module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature_bool.FeatureBool"><code class="docutils literal notranslate"><span class="pre">FeatureBool</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_bool.FeatureBool.value"><code class="docutils literal notranslate"><span class="pre">FeatureBool.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature_command">pyjds.feature_command module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature_command.FeatureCommand"><code class="docutils literal notranslate"><span class="pre">FeatureCommand</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_command.FeatureCommand.execute"><code class="docutils literal notranslate"><span class="pre">FeatureCommand.execute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_command.FeatureCommand.is_done"><code class="docutils literal notranslate"><span class="pre">FeatureCommand.is_done()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature_enum">pyjds.feature_enum module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature_enum.FeatureEnum"><code class="docutils literal notranslate"><span class="pre">FeatureEnum</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum.FeatureEnum.entries"><code class="docutils literal notranslate"><span class="pre">FeatureEnum.entries</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum.FeatureEnum.value"><code class="docutils literal notranslate"><span class="pre">FeatureEnum.value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum.FeatureEnum.value_as_str"><code class="docutils literal notranslate"><span class="pre">FeatureEnum.value_as_str</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature_enum_entry">pyjds.feature_enum_entry module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry.description"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry.display_name"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.display_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry.is_available"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.is_available()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry.name"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry.tool_tip"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.tool_tip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry.value"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry.visibility"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.visibility</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature_float">pyjds.feature_float module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature_float.FeatureFloat"><code class="docutils literal notranslate"><span class="pre">FeatureFloat</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_float.FeatureFloat.range"><code class="docutils literal notranslate"><span class="pre">FeatureFloat.range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_float.FeatureFloat.representation_type"><code class="docutils literal notranslate"><span class="pre">FeatureFloat.representation_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_float.FeatureFloat.unit"><code class="docutils literal notranslate"><span class="pre">FeatureFloat.unit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_float.FeatureFloat.value"><code class="docutils literal notranslate"><span class="pre">FeatureFloat.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature_integer">pyjds.feature_integer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature_integer.FeatureInteger"><code class="docutils literal notranslate"><span class="pre">FeatureInteger</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_integer.FeatureInteger.increment"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.increment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_integer.FeatureInteger.range"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_integer.FeatureInteger.representation_type"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.representation_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_integer.FeatureInteger.unit"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.unit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_integer.FeatureInteger.value"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature_register">pyjds.feature_register module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature_register.FeatureRegister"><code class="docutils literal notranslate"><span class="pre">FeatureRegister</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.feature_string">pyjds.feature_string module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.feature_string.FeatureString"><code class="docutils literal notranslate"><span class="pre">FeatureString</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_string.FeatureString.max_length"><code class="docutils literal notranslate"><span class="pre">FeatureString.max_length</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.feature_string.FeatureString.value"><code class="docutils literal notranslate"><span class="pre">FeatureString.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.host_interface">pyjds.host_interface module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.host_interface.HostInterface"><code class="docutils literal notranslate"><span class="pre">HostInterface</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.host_interface.HostInterface.display_id"><code class="docutils literal notranslate"><span class="pre">HostInterface.display_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.image">pyjds.image module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.image.Image"><code class="docutils literal notranslate"><span class="pre">Image</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.image.Image.block_id"><code class="docutils literal notranslate"><span class="pre">Image.block_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.image.Image.get_data"><code class="docutils literal notranslate"><span class="pre">Image.get_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.image.Image.height"><code class="docutils literal notranslate"><span class="pre">Image.height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.image.Image.is_image_dropped"><code class="docutils literal notranslate"><span class="pre">Image.is_image_dropped()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.image.Image.reception_time"><code class="docutils literal notranslate"><span class="pre">Image.reception_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.image.Image.timestamp"><code class="docutils literal notranslate"><span class="pre">Image.timestamp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.image.Image.width"><code class="docutils literal notranslate"><span class="pre">Image.width</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.stream">pyjds.stream module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.stream.Stream"><code class="docutils literal notranslate"><span class="pre">Stream</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream.Stream.channel"><code class="docutils literal notranslate"><span class="pre">Stream.channel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream.Stream.get_buffer"><code class="docutils literal notranslate"><span class="pre">Stream.get_buffer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream.Stream.get_parameter"><code class="docutils literal notranslate"><span class="pre">Stream.get_parameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream.Stream.get_parameters"><code class="docutils literal notranslate"><span class="pre">Stream.get_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream.Stream.queued_buffer_count"><code class="docutils literal notranslate"><span class="pre">Stream.queued_buffer_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream.Stream.queued_buffer_maximun"><code class="docutils literal notranslate"><span class="pre">Stream.queued_buffer_maximun</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.stream_gev">pyjds.stream_gev module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.stream_gev.StreamGEV"><code class="docutils literal notranslate"><span class="pre">StreamGEV</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream_gev.StreamGEV.device_ip_adress"><code class="docutils literal notranslate"><span class="pre">StreamGEV.device_ip_adress</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream_gev.StreamGEV.local_ip_address"><code class="docutils literal notranslate"><span class="pre">StreamGEV.local_ip_address</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream_gev.StreamGEV.local_port"><code class="docutils literal notranslate"><span class="pre">StreamGEV.local_port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream_gev.StreamGEV.user_mode_data_receiver_thread_priority"><code class="docutils literal notranslate"><span class="pre">StreamGEV.user_mode_data_receiver_thread_priority</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds.stream_u3v">pyjds.stream_u3v module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.stream_u3v.StreamU3V"><code class="docutils literal notranslate"><span class="pre">StreamU3V</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyjds.stream_u3v.StreamU3V.guid"><code class="docutils literal notranslate"><span class="pre">StreamU3V.guid</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyjds">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyjds.get_pyjds_path"><code class="docutils literal notranslate"><span class="pre">get_pyjds_path()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="error_convert_table.html">Error correspondence table with PvResult</a></li>
 </ul>
 
         </div>
@@ -89,8 +370,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>pyjds package</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">pyjds package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/pyjds.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -105,29 +386,759 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
 </section>
-<section id="pyjds-buffer-module">
-<h2>pyjds.buffer module<a class="headerlink" href="#pyjds-buffer-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.buffer">
+<span id="pyjds-buffer-module"></span><h2>pyjds.buffer module<a class="headerlink" href="#module-pyjds.buffer" title="Permalink to this heading"></a></h2>
+<p>Buffer class acquired from camera</p>
+<p>Buffer data and attribute information can be retrieved</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not hold the buffer for long periods of time.
+User applications should not keep buffers in containers, e.g. lists,
+otherwise image acquisition will fail when there are no more buffers available.
+If you want to keep the image data, please hold the Image class.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The number of buffers can be specified in
+<a class="reference internal" href="#pyjds.device.Device.acquisition_start" title="pyjds.device.Device.acquisition_start"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pyjds.device.Device.acquisition_start()</span></code></a></p>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.buffer.</span></span><span class="sig-name descname"><span class="pre">Buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.buffer.Buffer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>BUffer class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.block_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">block_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.block_id" title="Permalink to this definition"></a></dt>
+<dd><p>Get block id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>block id</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.get_chunk_values">
+<span class="sig-name descname"><span class="pre">get_chunk_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.buffer.Buffer.get_chunk_values" title="Permalink to this definition"></a></dt>
+<dd><p>Get chunk data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict[chunk_name, chunk_value]  chunk_vales</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.get_image">
+<span class="sig-name descname"><span class="pre">get_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debayer_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyjds.enum_debayer_type.DebayerType" title="pyjds.enum_debayer_type.DebayerType"><span class="pre">DebayerType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DebayerType.SIMPLE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.buffer.Buffer.get_image" title="Permalink to this definition"></a></dt>
+<dd><p>Get image</p>
+<blockquote>
+<div><p>Automatically converts the image to Numpy ndarray format.
+If the PixelFormat is Packed, the unpacked result can be obtained;
+if the PixelFormat is 10bit or more, 16bit data will be generated.
+If PixelFormat is Bayer, the specified debayer_method is used;
+if NOPROCESS is specified, the image is output as a Bayer array.
+However, if the PixelFormat is Packed, unpack processing is performed.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>debayer_method</strong> (<a class="reference internal" href="#pyjds.enum_debayer_type.DebayerType" title="pyjds.enum_debayer_type.DebayerType"><em>DebayerType</em></a><em>, </em><em>optional</em>) – , by default DebayerType.SIMPLE</p></li>
+<li><p><strong>thread_num</strong> (<em>Number</em><em> of </em><em>threads used for the RAW to ndarray conversion process</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>image data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.image.Image" title="pyjds.image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.lost_packet_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lost_packet_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.lost_packet_count" title="Permalink to this definition"></a></dt>
+<dd><p>Get lost packet count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>lost packet count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.packet_out_of_order_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet_out_of_order_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.packet_out_of_order_count" title="Permalink to this definition"></a></dt>
+<dd><p>Get packet out of order count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>packet out of order count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.packet_recoverd_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet_recoverd_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.packet_recoverd_count" title="Permalink to this definition"></a></dt>
+<dd><p>Get packet recoverd count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>packet recoverd count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.payload_size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">payload_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.payload_size" title="Permalink to this definition"></a></dt>
+<dd><p>Get payload size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>payload size</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.reception_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reception_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.reception_time" title="Permalink to this definition"></a></dt>
+<dd><p>Get reception time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>reception time</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.resend_group_request_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resend_group_request_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.resend_group_request_count" title="Permalink to this definition"></a></dt>
+<dd><p>Get resend group request count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>resend group request count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.resend_packet_requested_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resend_packet_requested_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.resend_packet_requested_count" title="Permalink to this definition"></a></dt>
+<dd><p>Get resend packet requested count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>resend packet requested count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.buffer.Buffer.timestamp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.buffer.Buffer.timestamp" title="Permalink to this definition"></a></dt>
+<dd><p>Get timestamp</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>timestamp</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-device-module">
-<h2>pyjds.device module<a class="headerlink" href="#pyjds-device-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.device">
+<span id="pyjds-device-module"></span><h2>pyjds.device module<a class="headerlink" href="#module-pyjds.device" title="Permalink to this heading"></a></h2>
+<p>Device module
+Superclasses of DeviceGEV and DeviceU3V</p>
+<p>It is possible to request AcqusitionStart/Stop to the device
+and to get the feature of the device. Also,
+depending on the number of Streams the device has,
+it will automatically generate the necessary Streams.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.device.Device">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.device.</span></span><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.device.Device" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Device class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.acquisition_start">
+<span class="sig-name descname"><span class="pre">acquisition_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">16</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyjds.device.Device.acquisition_start" title="Permalink to this definition"></a></dt>
+<dd><p>Send AcquisitionStart command to the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>buffer_count</strong> (<em>int</em><em>, </em><em>optional</em>) – acquisition buffer count per stream , by default 16</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsAcqusitionException" title="pyjds.error_pyjds.PyJdsAcqusitionException"><strong>PyJdsAcqusitionException</strong></a> – </p></li>
+<li><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsStreamException" title="pyjds.error_pyjds.PyJdsStreamException"><strong>PyJdsStreamException</strong></a> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.acquisition_stop">
+<span class="sig-name descname"><span class="pre">acquisition_stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyjds.device.Device.acquisition_stop" title="Permalink to this definition"></a></dt>
+<dd><p>Send AcquisitionStop command to the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsAcqusitionException" title="pyjds.error_pyjds.PyJdsAcqusitionException"><strong>PyJdsAcqusitionException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.connect">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyjds.device.Device.connect" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.create_and_open_streams">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_and_open_streams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usermode_data_receiver_thread_priority</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.stream.Stream" title="pyjds.stream.Stream"><span class="pre">Stream</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.device.Device.create_and_open_streams" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.dis_connect">
+<span class="sig-name descname"><span class="pre">dis_connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyjds.device.Device.dis_connect" title="Permalink to this definition"></a></dt>
+<dd><p>Disconnect the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsConnectException" title="pyjds.error_pyjds.PyJdsConnectException"><strong>PyJdsConnectException</strong></a> – Failed to disconnect to the device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.get_communication_parameter">
+<span class="sig-name descname"><span class="pre">get_communication_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><span class="pre">Feature</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.device.Device.get_communication_parameter" title="Permalink to this definition"></a></dt>
+<dd><p>Get the appropriate communication feature class according to the feature name.
+The communication feature class is used to communicate between host and devices.</p>
+<p>If the specified feature name is of type Integer, it returns FeatureInteger Class,
+and if it is of type Enum, it returns FeatureEnum Class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>feature_name</strong> (<em>str</em>) – feature name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>FeatureBool</em> – If type of the feature name is Boolean returns FutureBool class</p></li>
+<li><p><em>FeatureInteger</em> – If type of the feature name is Integer returns FeatureInteger class</p></li>
+<li><p><em>FeatureFloat</em> – If type of the feature name is Float returns FeatureFloat class</p></li>
+<li><p><em>FeatureString</em> – If type of the feature name is String returns FeatureString class</p></li>
+<li><p><em>FeatureEnum</em> – If type of the feature name is Enumeration returns FeatureEnum class</p></li>
+<li><p><em>FeatureCommand</em> – If type of the feature name is Command returns FeatureCommand class</p></li>
+<li><p><em>None</em> – If the specified feature_name does not exist in the camera.
+Whether the specified feature exists or not is determined by the specifications
+of each camera model, and it is possible that the feature does not exist,
+so this is not an error.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.get_communication_parameters">
+<span class="sig-name descname"><span class="pre">get_communication_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><span class="pre">Feature</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.device.Device.get_communication_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Get all communication features.
+This method keeps the order of the retrieved items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[description]</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature">Feature</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.get_feature">
+<span class="sig-name descname"><span class="pre">get_feature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><span class="pre">Feature</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.device.Device.get_feature" title="Permalink to this definition"></a></dt>
+<dd><p>Get the appropriate feature class according to the feature name.</p>
+<p>If the specified feature name is of type Integer, it returns FeatureInteger Class,
+and if it is of type Enum, it returns FeatureEnum Class.
+If the specified feature name is not exist in the camera then return None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>feature_name</strong> (<em>str</em>) – feature name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>FeatureBool</em> – If type of the feature name is Boolean returns FutureBool class</p></li>
+<li><p><em>FeatureInteger</em> – If type of the feature name is Integer returns FeatureInteger class</p></li>
+<li><p><em>FeatureFloat</em> – If type of the feature name is Float returns FeatureFloat class</p></li>
+<li><p><em>FeatureString</em> – If type of the feature name is String returns FeatureString class</p></li>
+<li><p><em>FeatureEnum</em> – If type of the feature name is Enumeration returns FeatureEnum class</p></li>
+<li><p><em>FeatureCommand</em> – If type of the feature name is Command returns FeatureCommand class</p></li>
+<li><p><em>None</em> – If the specified feature_name does not exist in the camera.
+Whether the specified feature exists or not is determined by the specifications
+of each camera model, and it is possible that the feature does not exist,
+so this is not an error.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.get_features">
+<span class="sig-name descname"><span class="pre">get_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><span class="pre">Feature</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.device.Device.get_features" title="Permalink to this definition"></a></dt>
+<dd><p>Get all features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[description]</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature">Feature</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device.Device.interface_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interface_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pyjds.enum_interface_type.InterfaceType" title="pyjds.enum_interface_type.InterfaceType"><span class="pre">InterfaceType</span></a></em><a class="headerlink" href="#pyjds.device.Device.interface_type" title="Permalink to this definition"></a></dt>
+<dd><p>Get device interface type of the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>InterfaceType.GigEVision : if device is GigEVision
+InterfaceType.USB3Vision : if device is USB3Vision</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pyjds.enum_interface_type.InterfaceType" title="pyjds.enum_interface_type.InterfaceType">InterfaceType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device.Device.is_connected">
+<span class="sig-name descname"><span class="pre">is_connected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pyjds.device.Device.is_connected" title="Permalink to this definition"></a></dt>
+<dd><p>Check that the camera is already connected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If true already connected, else not connected</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-device-factory-module">
-<h2>pyjds.device_factory module<a class="headerlink" href="#pyjds-device-factory-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.device_factory">
+<span id="pyjds-device-factory-module"></span><h2>pyjds.device_factory module<a class="headerlink" href="#module-pyjds.device_factory" title="Permalink to this heading"></a></h2>
+<p>Device factory module</p>
+<p>Create an instance Device class using the DeviceInfo obtained by DeviceFinder.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.device_factory.DeviceFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.device_factory.</span></span><span class="sig-name descname"><span class="pre">DeviceFactory</span></span><a class="headerlink" href="#pyjds.device_factory.DeviceFactory" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Device factory class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_factory.DeviceFactory.create">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyjds.device_info.DeviceInfo" title="pyjds.device_info.DeviceInfo"><span class="pre">DeviceInfo</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pyjds.device.Device" title="pyjds.device.Device"><span class="pre">Device</span></a></span></span><a class="headerlink" href="#pyjds.device_factory.DeviceFactory.create" title="Permalink to this definition"></a></dt>
+<dd><p>Create Device instance corresponding of device_info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device_info</strong> (<a class="reference internal" href="#pyjds.device_info.DeviceInfo" title="pyjds.device_info.DeviceInfo"><em>DeviceInfo</em></a>) – DeviceInfo found by DeviceFinder</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns DeviceGEV or DeviceU3V according to the type specified in device_info.interface_type.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.device.Device" title="pyjds.device.Device">Device</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsConnectException" title="pyjds.error_pyjds.PyJdsConnectException"><strong>PyJdsConnectException</strong></a> – Invalid interface type</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-device-finder-module">
-<h2>pyjds.device_finder module<a class="headerlink" href="#pyjds-device-finder-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.device_finder">
+<span id="pyjds-device-finder-module"></span><h2>pyjds.device_finder module<a class="headerlink" href="#module-pyjds.device_finder" title="Permalink to this heading"></a></h2>
+<p>Device finder module</p>
+<p>Class to search for devices connected to the host computer.
+For GigE cameras, use directed broadcast or limited broadcast for detection.
+The default is to use directed broadcast.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.device_finder.DeviceFinder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.device_finder.</span></span><span class="sig-name descname"><span class="pre">DeviceFinder</span></span><a class="headerlink" href="#pyjds.device_finder.DeviceFinder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_finder.DeviceFinder.find">
+<span class="sig-name descname"><span class="pre">find</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detect_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyjds.enum_detect_device_method_type.DetectDeviceType" title="pyjds.enum_detect_device_method_type.DetectDeviceType"><span class="pre">DetectDeviceType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DetectDeviceType.DirectedBroadcast</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.device_info.DeviceInfo" title="pyjds.device_info.DeviceInfo"><span class="pre">DeviceInfo</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.device_finder.DeviceFinder.find" title="Permalink to this definition"></a></dt>
+<dd><p>Find GigE and USB3 Vision devices reachable from this system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout_ms</strong> (<em>int</em><em>, </em><em>optional</em>) – timeout millisec, by default 1500</p></li>
+<li><p><strong>detect_type</strong> (<a class="reference internal" href="#pyjds.enum_detect_device_method_type.DetectDeviceType" title="pyjds.enum_detect_device_method_type.DetectDeviceType"><em>DetectDeviceType</em></a><em>, </em><em>optional</em>) – Set the detection method, by default is using directed broadcast.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of DeviceInfo</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#pyjds.device_info.DeviceInfo" title="pyjds.device_info.DeviceInfo">DeviceInfo</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-device-gev-module">
-<h2>pyjds.device_gev module<a class="headerlink" href="#pyjds-device-gev-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.device_gev">
+<span id="pyjds-device-gev-module"></span><h2>pyjds.device_gev module<a class="headerlink" href="#module-pyjds.device_gev" title="Permalink to this heading"></a></h2>
+<p>GEV device module</p>
+<p>For GigE cameras, the access type can be specified at the time of connection</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.device_gev.DeviceGEV">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.device_gev.</span></span><span class="sig-name descname"><span class="pre">DeviceGEV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DeviceGEV</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.device_gev.DeviceGEV" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.device.Device" title="pyjds.device.Device"><code class="xref py py-class docutils literal notranslate"><span class="pre">Device</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_gev.DeviceGEV.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">access_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyjds.enum_access_type.AccessType" title="pyjds.enum_access_type.AccessType"><span class="pre">AccessType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">AccessType.Control</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyjds.device_gev.DeviceGEV.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Connect to the GigE device.</p>
+<p>For GigE devices, the packet size is determined automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsConnectException" title="pyjds.error_pyjds.PyJdsConnectException"><strong>PyJdsConnectException</strong></a> – Failed to connect to the device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_gev.DeviceGEV.create">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.device_gev.DeviceGEV.create" title="Permalink to this definition"></a></dt>
+<dd><p>Create the GigE device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connection_id</strong> (<em>str</em>) – </p></li>
+<li><p><strong>address</strong> (<em>IP</em>) – </p></li>
+<li><p><strong>valid.</strong> (<em>MAC address and DeviceUserID are</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_gev.DeviceGEV.create_and_open_streams">
+<span class="sig-name descname"><span class="pre">create_and_open_streams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usermode_data_receiver_thread_priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.stream_gev.StreamGEV" title="pyjds.stream_gev.StreamGEV"><span class="pre">StreamGEV</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.device_gev.DeviceGEV.create_and_open_streams" title="Permalink to this definition"></a></dt>
+<dd><p>Create streams to the connecting device.
+If the device has multiple streams, automatically generate the corresponding stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>usermode_data_receiver_thread_priority</strong> (<em>int</em><em>, </em><em>optional</em>) – <p>Set usermode_data_receiver_thread_priority in stream class
+In Windows, 0-6 is valid.</p>
+<blockquote>
+<div><p>0:THREAD_PRIORITY_IDLE
+1:THREAD_PRIORITY_LOWEST
+2:THREAD_PRIORITY_BELOW_NORMAL
+3:THREAD_PRIORITY_NORMAL
+4:THREAD_PRIORITY_ABOVE_NORMAL
+5:THREAD_PRIORITY_HIGHEST
+6:THREAD_PRIORITY_TIME_CRITICAL</p>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>stream_list</strong> – list of stream description</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of <a class="reference internal" href="#pyjds.stream.Stream" title="pyjds.stream.Stream">Stream</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsStreamException" title="pyjds.error_pyjds.PyJdsStreamException"><strong>PyJdsStreamException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_gev.DeviceGEV.ip_address">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_gev.DeviceGEV.ip_address" title="Permalink to this definition"></a></dt>
+<dd><p>Get ip address.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ip address</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_gev.DeviceGEV.mac_address">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mac_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_gev.DeviceGEV.mac_address" title="Permalink to this definition"></a></dt>
+<dd><p>Get mac address</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>mac address</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-device-info-module">
-<h2>pyjds.device_info module<a class="headerlink" href="#pyjds-device-info-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.device_info">
+<span id="pyjds-device-info-module"></span><h2>pyjds.device_info module<a class="headerlink" href="#module-pyjds.device_info" title="Permalink to this heading"></a></h2>
+<p>Device info module</p>
+<p>Device information class found by DeviceFinder
+Used by DeviceFactory to create camera instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.device_info.</span></span><span class="sig-name descname"><span class="pre">DeviceInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.device_info.DeviceInfo" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.connection_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connection_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_info.DeviceInfo.connection_id" title="Permalink to this definition"></a></dt>
+<dd><p>Get connection id  of the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>connection id</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.device_version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_info.DeviceInfo.device_version" title="Permalink to this definition"></a></dt>
+<dd><p>Get device version of the device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>device version of the device</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.get_host_interface">
+<span class="sig-name descname"><span class="pre">get_host_interface</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pyjds.host_interface.HostInterface" title="pyjds.host_interface.HostInterface"><span class="pre">HostInterface</span></a></span></span><a class="headerlink" href="#pyjds.device_info.DeviceInfo.get_host_interface" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.interface_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interface_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pyjds.enum_interface_type.InterfaceType" title="pyjds.enum_interface_type.InterfaceType"><span class="pre">InterfaceType</span></a></em><a class="headerlink" href="#pyjds.device_info.DeviceInfo.interface_type" title="Permalink to this definition"></a></dt>
+<dd><p>Get device interface type of the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>InterfaceType.GigEVision : if device is GigEVision
+InterfaceType.USB3Vision : if device is USB3Vision</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pyjds.enum_interface_type.InterfaceType" title="pyjds.enum_interface_type.InterfaceType">InterfaceType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.manufacture_info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">manufacture_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_info.DeviceInfo.manufacture_info" title="Permalink to this definition"></a></dt>
+<dd><p>Get manufacturer information of the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Manufacturer information about the device</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.model_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_info.DeviceInfo.model_name" title="Permalink to this definition"></a></dt>
+<dd><p>Get model name of the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>model name of the device</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.serial_number">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serial_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_info.DeviceInfo.serial_number" title="Permalink to this definition"></a></dt>
+<dd><p>Get serial number of the device.
+:returns: serial number. This string is a unique identifier of the device.
+:rtype: str</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.user_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_info.DeviceInfo.user_id" title="Permalink to this definition"></a></dt>
+<dd><p>Get user-programmable device identifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>User-programmable device identifier.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_info.DeviceInfo.vendor_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vendor_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_info.DeviceInfo.vendor_name" title="Permalink to this definition"></a></dt>
+<dd><p>Get name of the manufacturer of the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Name of the manufacturer of the device.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-device-u3v-module">
-<h2>pyjds.device_u3v module<a class="headerlink" href="#pyjds-device-u3v-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.device_u3v">
+<span id="pyjds-device-u3v-module"></span><h2>pyjds.device_u3v module<a class="headerlink" href="#module-pyjds.device_u3v" title="Permalink to this heading"></a></h2>
+<p>U3V device module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.device_u3v.DeviceU3V">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.device_u3v.</span></span><span class="sig-name descname"><span class="pre">DeviceU3V</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.device_u3v.DeviceU3V" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.device.Device" title="pyjds.device.Device"><code class="xref py py-class docutils literal notranslate"><span class="pre">Device</span></code></a></p>
+<p>DeviceU3V class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_u3v.DeviceU3V.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyjds.device_u3v.DeviceU3V.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Connect to the U3V device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsConnectException" title="pyjds.error_pyjds.PyJdsConnectException"><strong>PyJdsConnectException</strong></a> – Failed to connect to the device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_u3v.DeviceU3V.create">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.device_u3v.DeviceU3V.create" title="Permalink to this definition"></a></dt>
+<dd><p>Create the U3V device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connection_id</strong> (<em>str</em>) – </p></li>
+<li><p><strong>valid.</strong> (<em>GUID is</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.device_u3v.DeviceU3V.create_and_open_streams">
+<span class="sig-name descname"><span class="pre">create_and_open_streams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usermode_data_receiver_thread_priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.stream_u3v.StreamU3V" title="pyjds.stream_u3v.StreamU3V"><span class="pre">StreamU3V</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.device_u3v.DeviceU3V.create_and_open_streams" title="Permalink to this definition"></a></dt>
+<dd><p>Create streams to the connecting device.
+If the device has multiple streams, automatically generate the corresponding stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>stream_list</strong> – list of stream description</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of <a class="reference internal" href="#pyjds.stream.Stream" title="pyjds.stream.Stream">Stream</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.device_u3v.DeviceU3V.guid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">guid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.device_u3v.DeviceU3V.guid" title="Permalink to this definition"></a></dt>
+<dd><p>Get guid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>guid</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-enum-access-type-module">
-<h2>pyjds.enum_access_type module<a class="headerlink" href="#pyjds-enum-access-type-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.enum_access_type">
+<span id="pyjds-enum-access-type-module"></span><h2>pyjds.enum_access_type module<a class="headerlink" href="#module-pyjds.enum_access_type" title="Permalink to this heading"></a></h2>
+<p>Interface type enum module</p>
+<p>Access type for connection that can be specified in case of GigE device</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.enum_access_type.AccessType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.enum_access_type.</span></span><span class="sig-name descname"><span class="pre">AccessType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.enum_access_type.AccessType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>GigE vision device access type</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_access_type.AccessType.Control">
+<span class="sig-name descname"><span class="pre">Control</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pyjds.enum_access_type.AccessType.Control" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates control access</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_access_type.AccessType.Exclusive">
+<span class="sig-name descname"><span class="pre">Exclusive</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pyjds.enum_access_type.AccessType.Exclusive" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates exclusive access</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_access_type.AccessType.ReadOnly">
+<span class="sig-name descname"><span class="pre">ReadOnly</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pyjds.enum_access_type.AccessType.ReadOnly" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates readonly access</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-pyjds.enum_debayer_type">
 <span id="pyjds-enum-debayer-type-module"></span><h2>pyjds.enum_debayer_type module<a class="headerlink" href="#module-pyjds.enum_debayer_type" title="Permalink to this heading"></a></h2>
@@ -161,8 +1172,30 @@ If the PixelFormat is not Packed, the camera output remains the same.</p>
 </dd></dl>
 
 </section>
-<section id="pyjds-enum-detect-device-method-type-module">
-<h2>pyjds.enum_detect_device_method_type module<a class="headerlink" href="#pyjds-enum-detect-device-method-type-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.enum_detect_device_method_type">
+<span id="pyjds-enum-detect-device-method-type-module"></span><h2>pyjds.enum_detect_device_method_type module<a class="headerlink" href="#module-pyjds.enum_detect_device_method_type" title="Permalink to this heading"></a></h2>
+<p>Detect device type enum module</p>
+<p>GigE device detection method type.
+This will be used by DeviceFinder.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.enum_detect_device_method_type.DetectDeviceType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.enum_detect_device_method_type.</span></span><span class="sig-name descname"><span class="pre">DetectDeviceType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.enum_detect_device_method_type.DetectDeviceType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>GigE vision detection method type</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_detect_device_method_type.DetectDeviceType.DirectedBroadcast">
+<span class="sig-name descname"><span class="pre">DirectedBroadcast</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pyjds.enum_detect_device_method_type.DetectDeviceType.DirectedBroadcast" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates tetected method is directed broadcast</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_detect_device_method_type.DetectDeviceType.LimitedBroadcast">
+<span class="sig-name descname"><span class="pre">LimitedBroadcast</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pyjds.enum_detect_device_method_type.DetectDeviceType.LimitedBroadcast" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates tetected method is limited broadcast</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-pyjds.enum_feature_type">
 <span id="pyjds-enum-feature-type-module"></span><h2>pyjds.enum_feature_type module<a class="headerlink" href="#module-pyjds.enum_feature_type" title="Permalink to this heading"></a></h2>
@@ -223,11 +1256,79 @@ If the PixelFormat is not Packed, the camera output remains the same.</p>
 </dd></dl>
 
 </section>
-<section id="pyjds-enum-interface-type-module">
-<h2>pyjds.enum_interface_type module<a class="headerlink" href="#pyjds-enum-interface-type-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.enum_interface_type">
+<span id="pyjds-enum-interface-type-module"></span><h2>pyjds.enum_interface_type module<a class="headerlink" href="#module-pyjds.enum_interface_type" title="Permalink to this heading"></a></h2>
+<p>Interface type enum module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.enum_interface_type.InterfaceType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.enum_interface_type.</span></span><span class="sig-name descname"><span class="pre">InterfaceType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.enum_interface_type.InterfaceType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>device interface type</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_interface_type.InterfaceType.GigEVision">
+<span class="sig-name descname"><span class="pre">GigEVision</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pyjds.enum_interface_type.InterfaceType.GigEVision" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates GigEVision interface</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_interface_type.InterfaceType.USB3Vision">
+<span class="sig-name descname"><span class="pre">USB3Vision</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pyjds.enum_interface_type.InterfaceType.USB3Vision" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates USB3Vision interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.enum_interface_type.InterfaceType.get">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_device_interface_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.enum_interface_type.InterfaceType.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-enum-representation-type-module">
-<h2>pyjds.enum_representation_type module<a class="headerlink" href="#pyjds-enum-representation-type-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.enum_representation_type">
+<span id="pyjds-enum-representation-type-module"></span><h2>pyjds.enum_representation_type module<a class="headerlink" href="#module-pyjds.enum_representation_type" title="Permalink to this heading"></a></h2>
+<p>Representation type enum module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.enum_representation_type.RepresentationType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.enum_representation_type.</span></span><span class="sig-name descname"><span class="pre">RepresentationType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.enum_representation_type.RepresentationType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>recommended representation of a node value</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_representation_type.RepresentationType.BOOLEAN">
+<span class="sig-name descname"><span class="pre">BOOLEAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pyjds.enum_representation_type.RepresentationType.BOOLEAN" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates recommend is slider with logarithmic behaviour</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_representation_type.RepresentationType.HEXNUMBER">
+<span class="sig-name descname"><span class="pre">HEXNUMBER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pyjds.enum_representation_type.RepresentationType.HEXNUMBER" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates recommend is hex number in an edit control</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_representation_type.RepresentationType.LINEAR">
+<span class="sig-name descname"><span class="pre">LINEAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pyjds.enum_representation_type.RepresentationType.LINEAR" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates recommend is slider with linear behavior</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_representation_type.RepresentationType.LOGARITHMIC">
+<span class="sig-name descname"><span class="pre">LOGARITHMIC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pyjds.enum_representation_type.RepresentationType.LOGARITHMIC" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates recommend is slider with logarithmic behaviour</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyjds.enum_representation_type.RepresentationType.PURENUMBER">
+<span class="sig-name descname"><span class="pre">PURENUMBER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pyjds.enum_representation_type.RepresentationType.PURENUMBER" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates recommend is secimal number in an edit control</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.enum_representation_type.RepresentationType.get">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_representation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.enum_representation_type.RepresentationType.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-pyjds.enum_visibility_type">
 <span id="pyjds-enum-visibility-type-module"></span><h2>pyjds.enum_visibility_type module<a class="headerlink" href="#module-pyjds.enum_visibility_type" title="Permalink to this heading"></a></h2>
@@ -269,8 +1370,43 @@ If the PixelFormat is not Packed, the camera output remains the same.</p>
 </dd></dl>
 
 </section>
-<section id="pyjds-error-pyjds-module">
-<h2>pyjds.error_pyjds module<a class="headerlink" href="#pyjds-error-pyjds-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.error_pyjds">
+<span id="pyjds-error-pyjds-module"></span><h2>pyjds.error_pyjds module<a class="headerlink" href="#module-pyjds.error_pyjds" title="Permalink to this heading"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyjds.error_pyjds.PyJdsAcqusitionException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.error_pyjds.</span></span><span class="sig-name descname"><span class="pre">PyJdsAcqusitionException</span></span><a class="headerlink" href="#pyjds.error_pyjds.PyJdsAcqusitionException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.error_pyjds.PyJdsException" title="pyjds.error_pyjds.PyJdsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyJdsException</span></code></a></p>
+<p>PyJds acqusition error</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyjds.error_pyjds.PyJdsConnectException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.error_pyjds.</span></span><span class="sig-name descname"><span class="pre">PyJdsConnectException</span></span><a class="headerlink" href="#pyjds.error_pyjds.PyJdsConnectException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.error_pyjds.PyJdsException" title="pyjds.error_pyjds.PyJdsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyJdsException</span></code></a></p>
+<p>PyJds Connct error.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyjds.error_pyjds.PyJdsException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.error_pyjds.</span></span><span class="sig-name descname"><span class="pre">PyJdsException</span></span><a class="headerlink" href="#pyjds.error_pyjds.PyJdsException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>PyJds base error</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyjds.error_pyjds.PyJdsFeatureException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.error_pyjds.</span></span><span class="sig-name descname"><span class="pre">PyJdsFeatureException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PyFeatureExp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.error_pyjds.PyJdsFeatureException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.error_pyjds.PyJdsException" title="pyjds.error_pyjds.PyJdsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyJdsException</span></code></a></p>
+<p>PyJds feature error</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyjds.error_pyjds.PyJdsStreamException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.error_pyjds.</span></span><span class="sig-name descname"><span class="pre">PyJdsStreamException</span></span><a class="headerlink" href="#pyjds.error_pyjds.PyJdsStreamException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.error_pyjds.PyJdsException" title="pyjds.error_pyjds.PyJdsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyJdsException</span></code></a></p>
+<p>PyJds stream error</p>
+</dd></dl>
+
 </section>
 <section id="module-pyjds.feature">
 <span id="pyjds-feature-module"></span><h2>pyjds.feature module<a class="headerlink" href="#module-pyjds.feature" title="Permalink to this heading"></a></h2>
@@ -481,32 +1617,459 @@ If the PixelFormat is not Packed, the camera output remains the same.</p>
 </dd></dl>
 
 </section>
-<section id="pyjds-feature-bool-module">
-<h2>pyjds.feature_bool module<a class="headerlink" href="#pyjds-feature-bool-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.feature_bool">
+<span id="pyjds-feature-bool-module"></span><h2>pyjds.feature_bool module<a class="headerlink" href="#module-pyjds.feature_bool" title="Permalink to this heading"></a></h2>
+<p>Feature bool module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.feature_bool.FeatureBool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.feature_bool.</span></span><span class="sig-name descname"><span class="pre">FeatureBool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.feature_bool.FeatureBool" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code></a></p>
+<p>Feature bool class</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_bool.FeatureBool.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pyjds.feature_bool.FeatureBool.value" title="Permalink to this definition"></a></dt>
+<dd><p>Get value of the feature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the feature value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsFeatureException" title="pyjds.error_pyjds.PyJdsFeatureException"><strong>PyJdsFeatureException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-feature-command-module">
-<h2>pyjds.feature_command module<a class="headerlink" href="#pyjds-feature-command-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.feature_command">
+<span id="pyjds-feature-command-module"></span><h2>pyjds.feature_command module<a class="headerlink" href="#module-pyjds.feature_command" title="Permalink to this heading"></a></h2>
+<p>Feature command module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.feature_command.FeatureCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.feature_command.</span></span><span class="sig-name descname"><span class="pre">FeatureCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.feature_command.FeatureCommand" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code></a></p>
+<p>Feature command class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.feature_command.FeatureCommand.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyjds.feature_command.FeatureCommand.execute" title="Permalink to this definition"></a></dt>
+<dd><p>Execute command of the feature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.feature_command.FeatureCommand.is_done">
+<span class="sig-name descname"><span class="pre">is_done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pyjds.feature_command.FeatureCommand.is_done" title="Permalink to this definition"></a></dt>
+<dd><p>Query whether the command is executed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If true the command done else not done.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-feature-enum-module">
-<h2>pyjds.feature_enum module<a class="headerlink" href="#pyjds-feature-enum-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.feature_enum">
+<span id="pyjds-feature-enum-module"></span><h2>pyjds.feature_enum module<a class="headerlink" href="#module-pyjds.feature_enum" title="Permalink to this heading"></a></h2>
+<p>Feature enum module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.feature_enum.FeatureEnum">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.feature_enum.</span></span><span class="sig-name descname"><span class="pre">FeatureEnum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.feature_enum.FeatureEnum" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code></a></p>
+<p>Feature enum class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum.FeatureEnum.entries">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">entries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.feature_enum_entry.FeatureEnumEntry" title="pyjds.feature_enum_entry.FeatureEnumEntry"><span class="pre">FeatureEnumEntry</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pyjds.feature_enum.FeatureEnum.entries" title="Permalink to this definition"></a></dt>
+<dd><p>Get entries of the feature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>entries of the feature</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum.FeatureEnum.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.feature_enum.FeatureEnum.value" title="Permalink to this definition"></a></dt>
+<dd><p>Get the feature value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the feature value</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the feature value</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsFeatureException" title="pyjds.error_pyjds.PyJdsFeatureException"><strong>PyJdsFeatureException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum.FeatureEnum.value_as_str">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value_as_str</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.feature_enum.FeatureEnum.value_as_str" title="Permalink to this definition"></a></dt>
+<dd><p>Get the feature value as str.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the feature value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsFeatureException" title="pyjds.error_pyjds.PyJdsFeatureException"><strong>PyJdsFeatureException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-feature-enum-entry-module">
-<h2>pyjds.feature_enum_entry module<a class="headerlink" href="#pyjds-feature-enum-entry-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.feature_enum_entry">
+<span id="pyjds-feature-enum-entry-module"></span><h2>pyjds.feature_enum_entry module<a class="headerlink" href="#module-pyjds.feature_enum_entry" title="Permalink to this heading"></a></h2>
+<p>Feature enum entry module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.feature_enum_entry.FeatureEnumEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.feature_enum_entry.</span></span><span class="sig-name descname"><span class="pre">FeatureEnumEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.feature_enum_entry.FeatureEnumEntry" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Feature enum entry class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum_entry.FeatureEnumEntry.description">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.feature_enum_entry.FeatureEnumEntry.description" title="Permalink to this definition"></a></dt>
+<dd><p>Get a long description of the feature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a long description of the feature</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum_entry.FeatureEnumEntry.display_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">display_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.feature_enum_entry.FeatureEnumEntry.display_name" title="Permalink to this definition"></a></dt>
+<dd><p>Get a name string for display.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a name string for display</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.feature_enum_entry.FeatureEnumEntry.is_available">
+<span class="sig-name descname"><span class="pre">is_available</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pyjds.feature_enum_entry.FeatureEnumEntry.is_available" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if the entry is available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If true available, else unavailable</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum_entry.FeatureEnumEntry.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.feature_enum_entry.FeatureEnumEntry.name" title="Permalink to this definition"></a></dt>
+<dd><p>Get feature name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>feature name</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum_entry.FeatureEnumEntry.tool_tip">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tool_tip</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.feature_enum_entry.FeatureEnumEntry.tool_tip" title="Permalink to this definition"></a></dt>
+<dd><p>Get a short description of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a short description of the node</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum_entry.FeatureEnumEntry.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.feature_enum_entry.FeatureEnumEntry.value" title="Permalink to this definition"></a></dt>
+<dd><p>Get the feature value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the feature value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsFeatureException" title="pyjds.error_pyjds.PyJdsFeatureException"><strong>PyJdsFeatureException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_enum_entry.FeatureEnumEntry.visibility">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visibility</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pyjds.enum_visibility_type.VisibilityType" title="pyjds.enum_visibility_type.VisibilityType"><span class="pre">VisibilityType</span></a></em><a class="headerlink" href="#pyjds.feature_enum_entry.FeatureEnumEntry.visibility" title="Permalink to this definition"></a></dt>
+<dd><p>Get the recommended visibility of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>recommended visibility of a node</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Visibility</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-feature-float-module">
-<h2>pyjds.feature_float module<a class="headerlink" href="#pyjds-feature-float-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.feature_float">
+<span id="pyjds-feature-float-module"></span><h2>pyjds.feature_float module<a class="headerlink" href="#module-pyjds.feature_float" title="Permalink to this heading"></a></h2>
+<p>Feature float module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.feature_float.FeatureFloat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.feature_float.</span></span><span class="sig-name descname"><span class="pre">FeatureFloat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.feature_float.FeatureFloat" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code></a></p>
+<p>Feature float class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_float.FeatureFloat.range">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">range</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pyjds.feature_float.FeatureFloat.range" title="Permalink to this definition"></a></dt>
+<dd><p>Get range of writable value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>range of writable value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[float,float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_float.FeatureFloat.representation_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">representation_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType" title="pyjds.enum_representation_type.RepresentationType"><span class="pre">RepresentationType</span></a></em><a class="headerlink" href="#pyjds.feature_float.FeatureFloat.representation_type" title="Permalink to this definition"></a></dt>
+<dd><p>Get recommended representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>recommended representation</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType" title="pyjds.enum_representation_type.RepresentationType">RepresentationType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_float.FeatureFloat.unit">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.feature_float.FeatureFloat.unit" title="Permalink to this definition"></a></dt>
+<dd><p>Get the physical unit name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the physical unit name</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_float.FeatureFloat.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pyjds.feature_float.FeatureFloat.value" title="Permalink to this definition"></a></dt>
+<dd><p>Get the feature value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the feature value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsFeatureException" title="pyjds.error_pyjds.PyJdsFeatureException"><strong>PyJdsFeatureException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-feature-integer-module">
-<h2>pyjds.feature_integer module<a class="headerlink" href="#pyjds-feature-integer-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.feature_integer">
+<span id="pyjds-feature-integer-module"></span><h2>pyjds.feature_integer module<a class="headerlink" href="#module-pyjds.feature_integer" title="Permalink to this heading"></a></h2>
+<p>Feature integer module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.feature_integer.FeatureInteger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.feature_integer.</span></span><span class="sig-name descname"><span class="pre">FeatureInteger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.feature_integer.FeatureInteger" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code></a></p>
+<p>Feature integer class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_integer.FeatureInteger.increment">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">increment</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.feature_integer.FeatureInteger.increment" title="Permalink to this definition"></a></dt>
+<dd><p>Get increment value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>increment value of the feature</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_integer.FeatureInteger.range">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">range</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pyjds.feature_integer.FeatureInteger.range" title="Permalink to this definition"></a></dt>
+<dd><p>Get range of writable value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>range of writable value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[int,int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_integer.FeatureInteger.representation_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">representation_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType" title="pyjds.enum_representation_type.RepresentationType"><span class="pre">RepresentationType</span></a></em><a class="headerlink" href="#pyjds.feature_integer.FeatureInteger.representation_type" title="Permalink to this definition"></a></dt>
+<dd><p>Get recommended representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>recommended representation</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pyjds.enum_representation_type.RepresentationType" title="pyjds.enum_representation_type.RepresentationType">RepresentationType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_integer.FeatureInteger.unit">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.feature_integer.FeatureInteger.unit" title="Permalink to this definition"></a></dt>
+<dd><p>Get the physical unit name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the physical unit name</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_integer.FeatureInteger.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.feature_integer.FeatureInteger.value" title="Permalink to this definition"></a></dt>
+<dd><p>Get the feature value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the feature value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsFeatureException" title="pyjds.error_pyjds.PyJdsFeatureException"><strong>PyJdsFeatureException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-feature-register-module">
-<h2>pyjds.feature_register module<a class="headerlink" href="#pyjds-feature-register-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.feature_register">
+<span id="pyjds-feature-register-module"></span><h2>pyjds.feature_register module<a class="headerlink" href="#module-pyjds.feature_register" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.feature_register.FeatureRegister">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.feature_register.</span></span><span class="sig-name descname"><span class="pre">FeatureRegister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.feature_register.FeatureRegister" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code></a></p>
+</dd></dl>
+
 </section>
-<section id="pyjds-feature-string-module">
-<h2>pyjds.feature_string module<a class="headerlink" href="#pyjds-feature-string-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.feature_string">
+<span id="pyjds-feature-string-module"></span><h2>pyjds.feature_string module<a class="headerlink" href="#module-pyjds.feature_string" title="Permalink to this heading"></a></h2>
+<p>Feature string module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.feature_string.FeatureString">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.feature_string.</span></span><span class="sig-name descname"><span class="pre">FeatureString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.feature_string.FeatureString" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code></a></p>
+<p>Feature string class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_string.FeatureString.max_length">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.feature_string.FeatureString.max_length" title="Permalink to this definition"></a></dt>
+<dd><p>Get max length of the feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>max length of the feature</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.feature_string.FeatureString.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.feature_string.FeatureString.value" title="Permalink to this definition"></a></dt>
+<dd><p>Get the feature value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the feature value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyjds.error_pyjds.PyJdsFeatureException" title="pyjds.error_pyjds.PyJdsFeatureException"><strong>PyJdsFeatureException</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-host-interface-module">
-<h2>pyjds.host_interface module<a class="headerlink" href="#pyjds-host-interface-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.host_interface">
+<span id="pyjds-host-interface-module"></span><h2>pyjds.host_interface module<a class="headerlink" href="#module-pyjds.host_interface" title="Permalink to this heading"></a></h2>
+<p>Host interface module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.host_interface.HostInterface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.host_interface.</span></span><span class="sig-name descname"><span class="pre">HostInterface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host_interface</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.host_interface.HostInterface" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Host interface class</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.host_interface.HostInterface.display_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">display_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.host_interface.HostInterface.display_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-pyjds.image">
 <span id="pyjds-image-module"></span><h2>pyjds.image module<a class="headerlink" href="#module-pyjds.image" title="Permalink to this heading"></a></h2>
@@ -623,17 +2186,226 @@ the image data will be 16bit.</p>
 </dd></dl>
 
 </section>
-<section id="pyjds-stream-module">
-<h2>pyjds.stream module<a class="headerlink" href="#pyjds-stream-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.stream">
+<span id="pyjds-stream-module"></span><h2>pyjds.stream module<a class="headerlink" href="#module-pyjds.stream" title="Permalink to this heading"></a></h2>
+<p>Stream module
+Class that represents an image stream.
+A device may have multiple Streams.
+In this case, it is necessary to create multiple Stream instances.
+In this library, by executing the create_streams() method of the Device class,
+the Stream corresponding to the device will be created.</p>
+<p>A Stream has multiple image buffers to be received from the device.
+The number of buffers can be specified in the argument of the acquisition_start() method of the Device class.</p>
+<p>Since the Buffer is finite, it needs to be released after image processing.
+This library will automatically release the Image class obtained by get_image() when it is out of scope.
+In other words, if you continue to use the Image class, you will not be able to acquire images.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.stream.Stream">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.stream.</span></span><span class="sig-name descname"><span class="pre">Stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.stream.Stream" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Stream class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.stream.Stream.channel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.stream.Stream.channel" title="Permalink to this definition"></a></dt>
+<dd><p>Get stream channel number</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Stream channel number</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.stream.Stream.get_buffer">
+<span class="sig-name descname"><span class="pre">get_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_millsec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1500</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pyjds.buffer.Buffer" title="pyjds.buffer.Buffer"><span class="pre">Buffer</span></a></span></span><a class="headerlink" href="#pyjds.stream.Stream.get_buffer" title="Permalink to this definition"></a></dt>
+<dd><p>Get buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>Buffer</em></p></li>
+<li><p><em>Raises</em> – PyJdsAcqusitionException</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.stream.Stream.get_parameter">
+<span class="sig-name descname"><span class="pre">get_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><span class="pre">Feature</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.stream.Stream.get_parameter" title="Permalink to this definition"></a></dt>
+<dd><p>Get the appropriate stream feature class according to the feature name.
+The communication feature class is used to communicate between host and devices.</p>
+<p>If the specified feature name is of type Integer, it returns FeatureInteger Class,
+and if it is of type Enum, it returns FeatureEnum Class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>feature_name</strong> (<em>str</em>) – feature name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>FeatureBool</em> – If type of the feature name is Boolean returns FutureBool class</p></li>
+<li><p><em>FeatureInteger</em> – If type of the feature name is Integer returns FeatureInteger class</p></li>
+<li><p><em>FeatureFloat</em> – If type of the feature name is Float returns FeatureFloat class</p></li>
+<li><p><em>FeatureString</em> – If type of the feature name is String returns FeatureString class</p></li>
+<li><p><em>FeatureEnum</em> – If type of the feature name is Enumeration returns FeatureEnum class</p></li>
+<li><p><em>FeatureCommand</em> – If type of the feature name is Command returns FeatureCommand class</p></li>
+<li><p><em>None</em> – If the specified feature_name does not exist in the camera.
+Whether the specified feature exists or not is determined by the specifications
+of each camera model, and it is possible that the feature does not exist,
+so this is not an error.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyjds.stream.Stream.get_parameters">
+<span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature"><span class="pre">Feature</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyjds.stream.Stream.get_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Get all stream features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#pyjds.feature.Feature" title="pyjds.feature.Feature">Feature</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.stream.Stream.queued_buffer_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">queued_buffer_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.stream.Stream.queued_buffer_count" title="Permalink to this definition"></a></dt>
+<dd><p>Get number of buffer waiting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of buffer waiting</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.stream.Stream.queued_buffer_maximun">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">queued_buffer_maximun</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.stream.Stream.queued_buffer_maximun" title="Permalink to this definition"></a></dt>
+<dd><p>Get number of maximum queue buffer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of maximum queue buffer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-stream-gev-module">
-<h2>pyjds.stream_gev module<a class="headerlink" href="#pyjds-stream-gev-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.stream_gev">
+<span id="pyjds-stream-gev-module"></span><h2>pyjds.stream_gev module<a class="headerlink" href="#module-pyjds.stream_gev" title="Permalink to this heading"></a></h2>
+<p>GEV Stream module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.stream_gev.StreamGEV">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.stream_gev.</span></span><span class="sig-name descname"><span class="pre">StreamGEV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m_stream</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">StreamGEV</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.stream_gev.StreamGEV" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.stream.Stream" title="pyjds.stream.Stream"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stream</span></code></a></p>
+<p>StreamGEV class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.stream_gev.StreamGEV.device_ip_adress">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device_ip_adress</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.stream_gev.StreamGEV.device_ip_adress" title="Permalink to this definition"></a></dt>
+<dd><p>Get the IPAddress of device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>IPAddress</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.stream_gev.StreamGEV.local_ip_address">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local_ip_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.stream_gev.StreamGEV.local_ip_address" title="Permalink to this definition"></a></dt>
+<dd><p>Get the IPAddress of host pc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>IPAddress</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.stream_gev.StreamGEV.local_port">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local_port</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyjds.stream_gev.StreamGEV.local_port" title="Permalink to this definition"></a></dt>
+<dd><p>Get the port number of host pc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>port number</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.stream_gev.StreamGEV.user_mode_data_receiver_thread_priority">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">user_mode_data_receiver_thread_priority</span></span><a class="headerlink" href="#pyjds.stream_gev.StreamGEV.user_mode_data_receiver_thread_priority" title="Permalink to this definition"></a></dt>
+<dd><p>The thread priority of user mode data receiver</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the thread priority of user mode data receiver</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the thread priority of user mode data receiver</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="pyjds-stream-u3v-module">
-<h2>pyjds.stream_u3v module<a class="headerlink" href="#pyjds-stream-u3v-module" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds.stream_u3v">
+<span id="pyjds-stream-u3v-module"></span><h2>pyjds.stream_u3v module<a class="headerlink" href="#module-pyjds.stream_u3v" title="Permalink to this heading"></a></h2>
+<p>U3V Stream module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyjds.stream_u3v.StreamU3V">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyjds.stream_u3v.</span></span><span class="sig-name descname"><span class="pre">StreamU3V</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m_stream</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">StreamU3V</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyjds.stream_u3v.StreamU3V" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyjds.stream.Stream" title="pyjds.stream.Stream"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stream</span></code></a></p>
+<p>StreamU3V class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyjds.stream_u3v.StreamU3V.guid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">guid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyjds.stream_u3v.StreamU3V.guid" title="Permalink to this definition"></a></dt>
+<dd><p>Get the stream’s GUID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>GUID</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="module-pyjds">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyjds" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyjds.get_pyjds_path">
+<span class="sig-prename descclassname"><span class="pre">pyjds.</span></span><span class="sig-name descname"><span class="pre">get_pyjds_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pyjds.get_pyjds_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 </section>
 
@@ -642,12 +2414,13 @@ the image data will be 16bit.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="top.html" class="btn btn-neutral float-left" title="About pyjds" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="error_convert_table.html" class="btn btn-neutral float-right" title="Error correspondence table with PvResult" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, JAI Corporation.</p>
+    <p>&#169; Copyright 2022, ue.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

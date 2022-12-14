@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pyjds &mdash; pyjds 0.0.3 documentation</title>
+  <title>pyjds &mdash; pyjds v0.0.5 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,6 +16,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -40,6 +41,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="top.html">About pyjds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyjds.html">pyjds package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error_convert_table.html">Error correspondence table with PvResult</a></li>
 </ul>
 
         </div>
@@ -55,8 +57,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>pyjds</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">pyjds</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -72,36 +74,314 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pyjds.html">pyjds package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pyjds.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-buffer-module">pyjds.buffer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-module">pyjds.device module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-factory-module">pyjds.device_factory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-finder-module">pyjds.device_finder module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-gev-module">pyjds.device_gev module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-info-module">pyjds.device_info module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-u3v-module">pyjds.device_u3v module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-enum-access-type-module">pyjds.enum_access_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_debayer_type">pyjds.enum_debayer_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-enum-detect-device-method-type-module">pyjds.enum_detect_device_method_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_feature_type">pyjds.enum_feature_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-enum-interface-type-module">pyjds.enum_interface_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-enum-representation-type-module">pyjds.enum_representation_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_visibility_type">pyjds.enum_visibility_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-error-pyjds-module">pyjds.error_pyjds module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature">pyjds.feature module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-bool-module">pyjds.feature_bool module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-command-module">pyjds.feature_command module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-enum-module">pyjds.feature_enum module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-enum-entry-module">pyjds.feature_enum_entry module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-float-module">pyjds.feature_float module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-integer-module">pyjds.feature_integer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-register-module">pyjds.feature_register module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-string-module">pyjds.feature_string module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-host-interface-module">pyjds.host_interface module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.image">pyjds.image module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-stream-module">pyjds.stream module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-stream-gev-module">pyjds.stream_gev module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-stream-u3v-module">pyjds.stream_u3v module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.buffer">pyjds.buffer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer"><code class="docutils literal notranslate"><span class="pre">Buffer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.block_id"><code class="docutils literal notranslate"><span class="pre">Buffer.block_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.get_chunk_values"><code class="docutils literal notranslate"><span class="pre">Buffer.get_chunk_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.get_image"><code class="docutils literal notranslate"><span class="pre">Buffer.get_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.lost_packet_count"><code class="docutils literal notranslate"><span class="pre">Buffer.lost_packet_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.packet_out_of_order_count"><code class="docutils literal notranslate"><span class="pre">Buffer.packet_out_of_order_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.packet_recoverd_count"><code class="docutils literal notranslate"><span class="pre">Buffer.packet_recoverd_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.payload_size"><code class="docutils literal notranslate"><span class="pre">Buffer.payload_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.reception_time"><code class="docutils literal notranslate"><span class="pre">Buffer.reception_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.resend_group_request_count"><code class="docutils literal notranslate"><span class="pre">Buffer.resend_group_request_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.resend_packet_requested_count"><code class="docutils literal notranslate"><span class="pre">Buffer.resend_packet_requested_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.buffer.Buffer.timestamp"><code class="docutils literal notranslate"><span class="pre">Buffer.timestamp</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device">pyjds.device module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.device.Device"><code class="docutils literal notranslate"><span class="pre">Device</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.acquisition_start"><code class="docutils literal notranslate"><span class="pre">Device.acquisition_start()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.acquisition_stop"><code class="docutils literal notranslate"><span class="pre">Device.acquisition_stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.connect"><code class="docutils literal notranslate"><span class="pre">Device.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.create_and_open_streams"><code class="docutils literal notranslate"><span class="pre">Device.create_and_open_streams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.dis_connect"><code class="docutils literal notranslate"><span class="pre">Device.dis_connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.get_communication_parameter"><code class="docutils literal notranslate"><span class="pre">Device.get_communication_parameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.get_communication_parameters"><code class="docutils literal notranslate"><span class="pre">Device.get_communication_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.get_feature"><code class="docutils literal notranslate"><span class="pre">Device.get_feature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.get_features"><code class="docutils literal notranslate"><span class="pre">Device.get_features()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.interface_type"><code class="docutils literal notranslate"><span class="pre">Device.interface_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device.Device.is_connected"><code class="docutils literal notranslate"><span class="pre">Device.is_connected()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_factory">pyjds.device_factory module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.device_factory.DeviceFactory"><code class="docutils literal notranslate"><span class="pre">DeviceFactory</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_factory.DeviceFactory.create"><code class="docutils literal notranslate"><span class="pre">DeviceFactory.create()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_finder">pyjds.device_finder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.device_finder.DeviceFinder"><code class="docutils literal notranslate"><span class="pre">DeviceFinder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_finder.DeviceFinder.find"><code class="docutils literal notranslate"><span class="pre">DeviceFinder.find()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_gev">pyjds.device_gev module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.device_gev.DeviceGEV"><code class="docutils literal notranslate"><span class="pre">DeviceGEV</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_gev.DeviceGEV.connect"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_gev.DeviceGEV.create"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_gev.DeviceGEV.create_and_open_streams"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.create_and_open_streams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_gev.DeviceGEV.ip_address"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.ip_address</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_gev.DeviceGEV.mac_address"><code class="docutils literal notranslate"><span class="pre">DeviceGEV.mac_address</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_info">pyjds.device_info module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo"><code class="docutils literal notranslate"><span class="pre">DeviceInfo</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.connection_id"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.connection_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.device_version"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.device_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.get_host_interface"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.get_host_interface()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.interface_type"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.interface_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.manufacture_info"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.manufacture_info</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.model_name"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.model_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.serial_number"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.serial_number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.user_id"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_info.DeviceInfo.vendor_name"><code class="docutils literal notranslate"><span class="pre">DeviceInfo.vendor_name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_u3v">pyjds.device_u3v module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.device_u3v.DeviceU3V"><code class="docutils literal notranslate"><span class="pre">DeviceU3V</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_u3v.DeviceU3V.connect"><code class="docutils literal notranslate"><span class="pre">DeviceU3V.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_u3v.DeviceU3V.create"><code class="docutils literal notranslate"><span class="pre">DeviceU3V.create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_u3v.DeviceU3V.create_and_open_streams"><code class="docutils literal notranslate"><span class="pre">DeviceU3V.create_and_open_streams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.device_u3v.DeviceU3V.guid"><code class="docutils literal notranslate"><span class="pre">DeviceU3V.guid</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_access_type">pyjds.enum_access_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.enum_access_type.AccessType"><code class="docutils literal notranslate"><span class="pre">AccessType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_access_type.AccessType.Control"><code class="docutils literal notranslate"><span class="pre">AccessType.Control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_access_type.AccessType.Exclusive"><code class="docutils literal notranslate"><span class="pre">AccessType.Exclusive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_access_type.AccessType.ReadOnly"><code class="docutils literal notranslate"><span class="pre">AccessType.ReadOnly</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_debayer_type">pyjds.enum_debayer_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.enum_debayer_type.DebayerType"><code class="docutils literal notranslate"><span class="pre">DebayerType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_debayer_type.DebayerType.INTERPOLATION"><code class="docutils literal notranslate"><span class="pre">DebayerType.INTERPOLATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_debayer_type.DebayerType.NOBAYERPROCESS"><code class="docutils literal notranslate"><span class="pre">DebayerType.NOBAYERPROCESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_debayer_type.DebayerType.SIMPLE"><code class="docutils literal notranslate"><span class="pre">DebayerType.SIMPLE</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_detect_device_method_type">pyjds.enum_detect_device_method_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.enum_detect_device_method_type.DetectDeviceType"><code class="docutils literal notranslate"><span class="pre">DetectDeviceType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_detect_device_method_type.DetectDeviceType.DirectedBroadcast"><code class="docutils literal notranslate"><span class="pre">DetectDeviceType.DirectedBroadcast</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_detect_device_method_type.DetectDeviceType.LimitedBroadcast"><code class="docutils literal notranslate"><span class="pre">DetectDeviceType.LimitedBroadcast</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_feature_type">pyjds.enum_feature_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType"><code class="docutils literal notranslate"><span class="pre">FeatureType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType.BOOLEAN"><code class="docutils literal notranslate"><span class="pre">FeatureType.BOOLEAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType.COMMAND"><code class="docutils literal notranslate"><span class="pre">FeatureType.COMMAND</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType.ENUMERATION"><code class="docutils literal notranslate"><span class="pre">FeatureType.ENUMERATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType.FLOAT"><code class="docutils literal notranslate"><span class="pre">FeatureType.FLOAT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType.INTEGER"><code class="docutils literal notranslate"><span class="pre">FeatureType.INTEGER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType.REGISTER"><code class="docutils literal notranslate"><span class="pre">FeatureType.REGISTER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType.STRING"><code class="docutils literal notranslate"><span class="pre">FeatureType.STRING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_feature_type.FeatureType.get"><code class="docutils literal notranslate"><span class="pre">FeatureType.get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_interface_type">pyjds.enum_interface_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.enum_interface_type.InterfaceType"><code class="docutils literal notranslate"><span class="pre">InterfaceType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_interface_type.InterfaceType.GigEVision"><code class="docutils literal notranslate"><span class="pre">InterfaceType.GigEVision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_interface_type.InterfaceType.USB3Vision"><code class="docutils literal notranslate"><span class="pre">InterfaceType.USB3Vision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_interface_type.InterfaceType.get"><code class="docutils literal notranslate"><span class="pre">InterfaceType.get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_representation_type">pyjds.enum_representation_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.enum_representation_type.RepresentationType"><code class="docutils literal notranslate"><span class="pre">RepresentationType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_representation_type.RepresentationType.BOOLEAN"><code class="docutils literal notranslate"><span class="pre">RepresentationType.BOOLEAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_representation_type.RepresentationType.HEXNUMBER"><code class="docutils literal notranslate"><span class="pre">RepresentationType.HEXNUMBER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_representation_type.RepresentationType.LINEAR"><code class="docutils literal notranslate"><span class="pre">RepresentationType.LINEAR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_representation_type.RepresentationType.LOGARITHMIC"><code class="docutils literal notranslate"><span class="pre">RepresentationType.LOGARITHMIC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_representation_type.RepresentationType.PURENUMBER"><code class="docutils literal notranslate"><span class="pre">RepresentationType.PURENUMBER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_representation_type.RepresentationType.get"><code class="docutils literal notranslate"><span class="pre">RepresentationType.get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_visibility_type">pyjds.enum_visibility_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.enum_visibility_type.VisibilityType"><code class="docutils literal notranslate"><span class="pre">VisibilityType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_visibility_type.VisibilityType.BEGINNER"><code class="docutils literal notranslate"><span class="pre">VisibilityType.BEGINNER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_visibility_type.VisibilityType.EXPERT"><code class="docutils literal notranslate"><span class="pre">VisibilityType.EXPERT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_visibility_type.VisibilityType.GURU"><code class="docutils literal notranslate"><span class="pre">VisibilityType.GURU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_visibility_type.VisibilityType.INVISIBLE"><code class="docutils literal notranslate"><span class="pre">VisibilityType.INVISIBLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.enum_visibility_type.VisibilityType.get"><code class="docutils literal notranslate"><span class="pre">VisibilityType.get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.error_pyjds">pyjds.error_pyjds module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.error_pyjds.PyJdsAcqusitionException"><code class="docutils literal notranslate"><span class="pre">PyJdsAcqusitionException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.error_pyjds.PyJdsConnectException"><code class="docutils literal notranslate"><span class="pre">PyJdsConnectException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.error_pyjds.PyJdsException"><code class="docutils literal notranslate"><span class="pre">PyJdsException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.error_pyjds.PyJdsFeatureException"><code class="docutils literal notranslate"><span class="pre">PyJdsFeatureException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.error_pyjds.PyJdsStreamException"><code class="docutils literal notranslate"><span class="pre">PyJdsStreamException</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature">pyjds.feature module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature"><code class="docutils literal notranslate"><span class="pre">Feature</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.category"><code class="docutils literal notranslate"><span class="pre">Feature.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.description"><code class="docutils literal notranslate"><span class="pre">Feature.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.display_name"><code class="docutils literal notranslate"><span class="pre">Feature.display_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.feature_type"><code class="docutils literal notranslate"><span class="pre">Feature.feature_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.from_string"><code class="docutils literal notranslate"><span class="pre">Feature.from_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.is_available"><code class="docutils literal notranslate"><span class="pre">Feature.is_available()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.is_implement"><code class="docutils literal notranslate"><span class="pre">Feature.is_implement()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.is_readable"><code class="docutils literal notranslate"><span class="pre">Feature.is_readable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.is_selector"><code class="docutils literal notranslate"><span class="pre">Feature.is_selector()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.is_streamable"><code class="docutils literal notranslate"><span class="pre">Feature.is_streamable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.is_writable"><code class="docutils literal notranslate"><span class="pre">Feature.is_writable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.name"><code class="docutils literal notranslate"><span class="pre">Feature.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.tool_tip"><code class="docutils literal notranslate"><span class="pre">Feature.tool_tip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.value"><code class="docutils literal notranslate"><span class="pre">Feature.value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature.Feature.visibility"><code class="docutils literal notranslate"><span class="pre">Feature.visibility</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_bool">pyjds.feature_bool module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature_bool.FeatureBool"><code class="docutils literal notranslate"><span class="pre">FeatureBool</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_bool.FeatureBool.value"><code class="docutils literal notranslate"><span class="pre">FeatureBool.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_command">pyjds.feature_command module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature_command.FeatureCommand"><code class="docutils literal notranslate"><span class="pre">FeatureCommand</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_command.FeatureCommand.execute"><code class="docutils literal notranslate"><span class="pre">FeatureCommand.execute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_command.FeatureCommand.is_done"><code class="docutils literal notranslate"><span class="pre">FeatureCommand.is_done()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_enum">pyjds.feature_enum module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature_enum.FeatureEnum"><code class="docutils literal notranslate"><span class="pre">FeatureEnum</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum.FeatureEnum.entries"><code class="docutils literal notranslate"><span class="pre">FeatureEnum.entries</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum.FeatureEnum.value"><code class="docutils literal notranslate"><span class="pre">FeatureEnum.value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum.FeatureEnum.value_as_str"><code class="docutils literal notranslate"><span class="pre">FeatureEnum.value_as_str</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_enum_entry">pyjds.feature_enum_entry module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature_enum_entry.FeatureEnumEntry"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum_entry.FeatureEnumEntry.description"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum_entry.FeatureEnumEntry.display_name"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.display_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum_entry.FeatureEnumEntry.is_available"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.is_available()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum_entry.FeatureEnumEntry.name"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum_entry.FeatureEnumEntry.tool_tip"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.tool_tip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum_entry.FeatureEnumEntry.value"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_enum_entry.FeatureEnumEntry.visibility"><code class="docutils literal notranslate"><span class="pre">FeatureEnumEntry.visibility</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_float">pyjds.feature_float module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature_float.FeatureFloat"><code class="docutils literal notranslate"><span class="pre">FeatureFloat</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_float.FeatureFloat.range"><code class="docutils literal notranslate"><span class="pre">FeatureFloat.range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_float.FeatureFloat.representation_type"><code class="docutils literal notranslate"><span class="pre">FeatureFloat.representation_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_float.FeatureFloat.unit"><code class="docutils literal notranslate"><span class="pre">FeatureFloat.unit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_float.FeatureFloat.value"><code class="docutils literal notranslate"><span class="pre">FeatureFloat.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_integer">pyjds.feature_integer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature_integer.FeatureInteger"><code class="docutils literal notranslate"><span class="pre">FeatureInteger</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_integer.FeatureInteger.increment"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.increment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_integer.FeatureInteger.range"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_integer.FeatureInteger.representation_type"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.representation_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_integer.FeatureInteger.unit"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.unit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_integer.FeatureInteger.value"><code class="docutils literal notranslate"><span class="pre">FeatureInteger.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_register">pyjds.feature_register module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature_register.FeatureRegister"><code class="docutils literal notranslate"><span class="pre">FeatureRegister</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_string">pyjds.feature_string module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.feature_string.FeatureString"><code class="docutils literal notranslate"><span class="pre">FeatureString</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_string.FeatureString.max_length"><code class="docutils literal notranslate"><span class="pre">FeatureString.max_length</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.feature_string.FeatureString.value"><code class="docutils literal notranslate"><span class="pre">FeatureString.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.host_interface">pyjds.host_interface module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.host_interface.HostInterface"><code class="docutils literal notranslate"><span class="pre">HostInterface</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.host_interface.HostInterface.display_id"><code class="docutils literal notranslate"><span class="pre">HostInterface.display_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.image">pyjds.image module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.image.Image"><code class="docutils literal notranslate"><span class="pre">Image</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.image.Image.block_id"><code class="docutils literal notranslate"><span class="pre">Image.block_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.image.Image.get_data"><code class="docutils literal notranslate"><span class="pre">Image.get_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.image.Image.height"><code class="docutils literal notranslate"><span class="pre">Image.height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.image.Image.is_image_dropped"><code class="docutils literal notranslate"><span class="pre">Image.is_image_dropped()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.image.Image.reception_time"><code class="docutils literal notranslate"><span class="pre">Image.reception_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.image.Image.timestamp"><code class="docutils literal notranslate"><span class="pre">Image.timestamp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.image.Image.width"><code class="docutils literal notranslate"><span class="pre">Image.width</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.stream">pyjds.stream module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.stream.Stream"><code class="docutils literal notranslate"><span class="pre">Stream</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream.Stream.channel"><code class="docutils literal notranslate"><span class="pre">Stream.channel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream.Stream.get_buffer"><code class="docutils literal notranslate"><span class="pre">Stream.get_buffer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream.Stream.get_parameter"><code class="docutils literal notranslate"><span class="pre">Stream.get_parameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream.Stream.get_parameters"><code class="docutils literal notranslate"><span class="pre">Stream.get_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream.Stream.queued_buffer_count"><code class="docutils literal notranslate"><span class="pre">Stream.queued_buffer_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream.Stream.queued_buffer_maximun"><code class="docutils literal notranslate"><span class="pre">Stream.queued_buffer_maximun</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.stream_gev">pyjds.stream_gev module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.stream_gev.StreamGEV"><code class="docutils literal notranslate"><span class="pre">StreamGEV</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream_gev.StreamGEV.device_ip_adress"><code class="docutils literal notranslate"><span class="pre">StreamGEV.device_ip_adress</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream_gev.StreamGEV.local_ip_address"><code class="docutils literal notranslate"><span class="pre">StreamGEV.local_ip_address</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream_gev.StreamGEV.local_port"><code class="docutils literal notranslate"><span class="pre">StreamGEV.local_port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream_gev.StreamGEV.user_mode_data_receiver_thread_priority"><code class="docutils literal notranslate"><span class="pre">StreamGEV.user_mode_data_receiver_thread_priority</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.stream_u3v">pyjds.stream_u3v module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.stream_u3v.StreamU3V"><code class="docutils literal notranslate"><span class="pre">StreamU3V</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyjds.html#pyjds.stream_u3v.StreamU3V.guid"><code class="docutils literal notranslate"><span class="pre">StreamU3V.guid</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyjds.html#pyjds.get_pyjds_path"><code class="docutils literal notranslate"><span class="pre">get_pyjds_path()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -116,7 +396,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, JAI Corporation.</p>
+    <p>&#169; Copyright 2022, ue.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

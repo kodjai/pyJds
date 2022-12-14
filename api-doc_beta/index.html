@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to pyjds’s documentation! &mdash; pyjds 0.0.3 documentation</title>
+  <title>Welcome to pyjds’s documentation! &mdash; pyjds v0.0.5 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,6 +16,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -41,6 +42,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="top.html">About pyjds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyjds.html">pyjds package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error_convert_table.html">Error correspondence table with PvResult</a></li>
 </ul>
 
         </div>
@@ -56,8 +58,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Welcome to pyjds’s documentation!</li>
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Welcome to pyjds’s documentation!</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -75,38 +77,39 @@
 <li class="toctree-l1"><a class="reference internal" href="top.html">About pyjds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyjds.html">pyjds package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pyjds.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-buffer-module">pyjds.buffer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-module">pyjds.device module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-factory-module">pyjds.device_factory module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-finder-module">pyjds.device_finder module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-gev-module">pyjds.device_gev module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-info-module">pyjds.device_info module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-device-u3v-module">pyjds.device_u3v module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-enum-access-type-module">pyjds.enum_access_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.buffer">pyjds.buffer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device">pyjds.device module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_factory">pyjds.device_factory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_finder">pyjds.device_finder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_gev">pyjds.device_gev module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_info">pyjds.device_info module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.device_u3v">pyjds.device_u3v module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_access_type">pyjds.enum_access_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_debayer_type">pyjds.enum_debayer_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-enum-detect-device-method-type-module">pyjds.enum_detect_device_method_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_detect_device_method_type">pyjds.enum_detect_device_method_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_feature_type">pyjds.enum_feature_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-enum-interface-type-module">pyjds.enum_interface_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-enum-representation-type-module">pyjds.enum_representation_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_interface_type">pyjds.enum_interface_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_representation_type">pyjds.enum_representation_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.enum_visibility_type">pyjds.enum_visibility_type module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-error-pyjds-module">pyjds.error_pyjds module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.error_pyjds">pyjds.error_pyjds module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature">pyjds.feature module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-bool-module">pyjds.feature_bool module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-command-module">pyjds.feature_command module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-enum-module">pyjds.feature_enum module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-enum-entry-module">pyjds.feature_enum_entry module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-float-module">pyjds.feature_float module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-integer-module">pyjds.feature_integer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-register-module">pyjds.feature_register module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-feature-string-module">pyjds.feature_string module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-host-interface-module">pyjds.host_interface module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_bool">pyjds.feature_bool module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_command">pyjds.feature_command module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_enum">pyjds.feature_enum module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_enum_entry">pyjds.feature_enum_entry module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_float">pyjds.feature_float module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_integer">pyjds.feature_integer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_register">pyjds.feature_register module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.feature_string">pyjds.feature_string module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.host_interface">pyjds.host_interface module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.image">pyjds.image module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-stream-module">pyjds.stream module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-stream-gev-module">pyjds.stream_gev module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#pyjds-stream-u3v-module">pyjds.stream_u3v module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.stream">pyjds.stream module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.stream_gev">pyjds.stream_gev module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds.stream_u3v">pyjds.stream_u3v module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyjds.html#module-pyjds">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="error_convert_table.html">Error correspondence table with PvResult</a></li>
 </ul>
 </div>
 </section>
@@ -129,7 +132,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, JAI Corporation.</p>
+    <p>&#169; Copyright 2022, ue.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

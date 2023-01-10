@@ -1,7 +1,5 @@
 '''
 The purpose of this sample is to show how to find a USB or GigE device, connect and change variables.
-
-
 '''
 
 
@@ -50,12 +48,17 @@ stream_fps=streams[0].get_parameter("AcquisitionRate")
 loop=0
 
 # Get buffer and parameter values while running
-while loop <= 10:
-    buffer = streams[0].get_buffer()
-    print("Block ID ", buffer.block_id)
-    loop = loop+1
-    print("Bandwidth : ", stream_param.value)
-    print("Fps : ", stream_fps.value)
+while loop <= 100:
+    try:
+        buffer = streams[0].get_buffer()
+        print("Block ID ", buffer.block_id)
+        loop = loop+1
+        print("Bandwidth : ", stream_param.value)
+        print("Fps : ", stream_fps.value)
+    except pyjds.PyJdsAcqusitionException:
+        print("1 acquisition error")
+        continue
+
 
 # Cleamup and stop acquisition
 del buffer

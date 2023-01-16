@@ -30,7 +30,7 @@ Currently it is able to install from only local file.
     **Note**: Use following command to find position of site-packages:
               python -c "import site; print (site.getsitepackages())"
 
-2. Link the local pyjds source directory into your python installtion.
+2. Link the local pyjds source directory into your python installation.
 ## Sample Codes
 Sample codes are available here: `xxx`
 

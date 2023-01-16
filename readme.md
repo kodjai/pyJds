@@ -27,6 +27,8 @@ Currently it is able to install from only local file.
 1. Copy your module file “_module.cp38-win_amd64.pyd” into the project. The module file can be found in the following directory: C:¥Users¥yourname¥AppData¥Roaming¥Python¥Python39¥site-packages¥pyjds.
 
     **Note**: If you use python 3.8, use “_module.cp39-win_amd64.pyd”.
+    **Note**: Use following command to find position of site-packages:
+              python -c "import site; print (site.getsitepackages())"
 
 2. Link the local pyjds source directory into your python installtion.
 ## Sample Codes
